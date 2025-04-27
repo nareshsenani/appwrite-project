@@ -39,9 +39,9 @@ function Header() {
    <header className='py-3 shadow bg-gray-500' >
     <Container>
       <nav className='flex'>
-        <div className='w-[100px] px-2 flex items-center  md:w-1/4 lg:w-1/5'>
+        <div className='w-[110px] shrink-0  flex items-center md:w-1/4 lg:w-1/5'>
           <Link to={'/'}>
-          <Logo noPadding width='100%'/>
+          <Logo noPadding width='100%' />
           </Link>
         </div>
 
