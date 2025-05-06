@@ -36,10 +36,10 @@ function Header() {
     }
   ]
   return (
-   <header className='py-3 shadow bg-gray-500 overflow-x-hidden' >
+   <header className='py-3 shadow bg-gray-500' >
     <Container>
-      <nav className='flex'>
-        <div className='max-w-[110px] shrink-0  flex items-center md:w-1/4 lg:w-1/5'>
+      <nav className='flex gap-5'>
+        <div className=' flex items-center md:w-1/4 lg:w-1/5'>
           <Link to={'/'}>
           <Logo noPadding width='100%' />
           </Link>
