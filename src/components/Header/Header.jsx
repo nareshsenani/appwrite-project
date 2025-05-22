@@ -36,36 +36,38 @@ function Header() {
     }
   ]
   return (
-   <header className='py-3 shadow bg-gray-500' >
-    <Container>
-      <nav className='flex gap-5'>
-        <div className=' flex items-center md:w-1/4 lg:w-1/5'>
-          <Link to={'/'}>
-          <Logo noPadding width='100%' />
-          </Link>
-        </div>
+  <header className="py-3 shadow-md bg-gray-900 text-white border-b border-gray-700">
+  <Container>
+    <nav className="flex gap-5">
+      <div className="flex items-center md:w-1/4 lg:w-1/5">
+        <Link to="/">
+          <Logo noPadding width="100%" />
+        </Link>
+      </div>
 
-        <ul className='flex ml-auto flex-shrink'>
-          {navItems.map((item) => 
+      <ul className="flex ml-auto flex-shrink">
+        {navItems.map((item) =>
           item.active ? (
             <li key={item.name}>
-              <button 
-              onClick={() => navigate(item.slug)}
-              className='inline-block px-3 sm:px-4 md:px-5 py-2 duration-200 hover:bg-blue-100 rounded-full'
-              >{item.name}
+              <button
+                onClick={() => navigate(item.slug)}
+                className="inline-block px-3 sm:px-4 md:px-5 py-2 rounded-full text-sm sm:text-base hover:bg-gray-700 transition duration-200"
+              >
+                {item.name}
               </button>
             </li>
           ) : null
-          )}
-          {authStatus && (
-            <li>
-              <LogoutBtn/>
-            </li>
-          )}
-        </ul>
-      </nav>
-    </Container>
-   </header>
+        )}
+        {authStatus && (
+          <li>
+            <LogoutBtn />
+          </li>
+        )}
+      </ul>
+    </nav>
+  </Container>
+</header>
+
   )
 }
 

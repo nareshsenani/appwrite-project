@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .bg-darkbg {
+    background-color: #242424;
+  }
+}
+
+
